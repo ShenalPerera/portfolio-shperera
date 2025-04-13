@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 224 15% 5%;              /* Almost black, very deep gray */
+    --foreground: 144 10% 85%;             /* Soft muted gray-green for text */
+
+    --card: 224 15% 7%;
+    --card-foreground: 144 10% 85%;
+
+    --popover: 224 15% 8%;
+    --popover-foreground: 144 10% 85%;
+
+    --primary: 142 72% 40%;                /* Rich forest green */
+    --primary-foreground: 0 0% 100%;       /* White for contrast */
+
+    --secondary: 218 8% 18%;               /* Neutral dark gray */
+    --secondary-foreground: 144 10% 85%;
+
+    --muted: 222 5% 15%;                   /* Very muted gray */
+    --muted-foreground: 144 8% 60%;
+
+    --accent: 145 70% 35%;                 /* Deep leafy green */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;              /* Darker red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 5% 16%;
+    --input: 220 5% 16%;
+    --ring: 145 55% 38%;                   /* Greenish ring */
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 224 15% 5%;
+    --foreground: 144 10% 85%;
+
+    --card: 224 15% 7%;
+    --card-foreground: 144 10% 85%;
+
+    --popover: 224 15% 8%;
+    --popover-foreground: 144 10% 85%;
+
+    --primary: 142 72% 40%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 218 8% 18%;
+    --secondary-foreground: 144 10% 85%;
+
+    --muted: 222 5% 15%;
+    --muted-foreground: 144 8% 60%;
+
+    --accent: 145 70% 35%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 5% 16%;
+    --input: 220 5% 16%;
+    --ring: 145 55% 38%;
+  }
+}
+
+
+
+
+
+@layer base {
+  * {
+    @apply border-border selection:bg-white/10 selection:text-white;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased overflow-x-hidden;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
+  }
+
+  html {
+    @apply scroll-smooth dark:bg-background;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-[0_4px_12px_-2px_rgba(0,0,0,0.3)];
+  }
+  
+  .neo-blur {
+    @apply backdrop-blur-2xl bg-black/40 border border-white/10;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+  }
+}
