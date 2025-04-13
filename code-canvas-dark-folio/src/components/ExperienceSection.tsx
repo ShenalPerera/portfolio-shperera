@@ -26,7 +26,7 @@ const ExperienceSection = () => {
 
   const handleDownloadCV = () => {
     // This would point to your actual CV file
-    window.open("/cv.pdf", "_blank");
+    window.open("/portfolio-shperera/shenal.perera.cv.pdf", "_blank");
   };
 
   return (

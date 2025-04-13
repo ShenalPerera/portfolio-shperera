@@ -113,16 +113,7 @@ const Navbar = () => {
           <div className="md:hidden mt-4 py-4 bg-card shadow-md rounded-md border border-border">
             <div className="flex flex-col space-y-4 px-4">
               {menuItems.map((item) => (
-                item.href.startsWith("/#") ? (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors flex items-center"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </a>
-                ) : (
+                item.href.startsWith("/#") && (
                   <Link
                     key={item.name}
                     to={item.href}
@@ -141,8 +132,6 @@ const Navbar = () => {
                     href={link.href}
                     className="text-foreground/70 hover:text-primary transition-colors"
                     aria-label={link.name}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
                     {link.icon}
                   </a>

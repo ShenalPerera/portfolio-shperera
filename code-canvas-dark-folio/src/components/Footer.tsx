@@ -25,42 +25,42 @@ const Footer = () => {
             >
               Home
             </Link>
-            <a 
-              href="/#about" 
+            <Link
+              to="/#about"
               className="text-foreground/80 hover:text-primary transition-colors text-sm"
             >
               About
-            </a>
-            <a 
-              href="/#experience" 
+            </Link>
+            <Link
+              to="/#experience"
               className="text-foreground/80 hover:text-primary transition-colors text-sm"
             >
               Experience
-            </a>
-            <a 
-              href="/#projects" 
+            </Link>
+            <Link
+              to="/#projects"
               className="text-foreground/80 hover:text-primary transition-colors text-sm"
             >
               Projects
-            </a>
-            <a 
-              href="/#skills" 
+            </Link>
+            <Link
+              to="/#skills"
               className="text-foreground/80 hover:text-primary transition-colors text-sm"
             >
               Skills
-            </a>
+            </Link>
             <Link 
               to="/blog" 
               className="text-foreground/80 hover:text-primary transition-colors text-sm"
             >
               Blog
             </Link>
-            <a 
-              href="/#contact" 
+            <Link
+              to="/#contact"
               className="text-foreground/80 hover:text-primary transition-colors text-sm"
             >
               Contact
-            </a>
+            </Link>
           </div>
           
           <div className="flex space-x-4">
